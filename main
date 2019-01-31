@@ -1,0 +1,30 @@
+Sentance = input("Enter something you want to WhOmP \n")
+Whomp2or3 = int(input("Would you like to whomp the first char first or second char. For first char input 1. For second char input 2. \n"))
+First = ''
+if Whomp2or3 != 1:
+        First = input("Type y if you want the first letter to be capitalized \n")
+x = 0
+count = -1
+count1 = 1
+if Whomp2or3 == 1:
+        count = 0
+if Whomp2or3 == 2:
+        count = 1
+NewMessage = ""
+NewChar = ''
+for char in Sentance:
+        x = count % 2
+
+        if char != " ":
+                count += 1
+
+        if x == 0:
+                NewChar = char.capitalize()
+
+        if x == 1:
+                NewChar = char
+        if First == 'y' and count1 == 1:
+                NewChar = char.capitalize()
+        count1 = 0
+        NewMessage = NewMessage + NewChar
+print(NewMessage)
